@@ -1,0 +1,1965 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+  <head>
+    <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+    <#if .locale == "zh_CN">
+      <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+    <#elseif .locale == "zh_TW">
+      <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+    <#elseif .locale == "ja_JP">
+      <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+    <#elseif .locale == "ko_KR">
+      <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+    <#elseif .locale == "th_TH">
+      <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+    </#if>
+    <macrolist>
+        <macro id="nlfooter">
+            <table width="100%">
+              <tr>
+                <td>
+                <!--<p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>-->
+                
+
+                  <p align="left" style="padding-left: 30px;">
+                    <span>
+                      Wordmark Here
+                    </span>
+                  </p>
+
+                
+       
+
+                </td>
+              </tr>
+            </table>
+        </macro>
+
+        <macro id="nlfooter2">
+            <table width="100%" style="font-size: 6pt; table-layout: fixed;">
+              <tr>
+                <td> 
+                  <p align="center" style="">
+                    <span>
+                      ${record.custbody_ng_cs_event_venue}
+                    </span>
+                  </p>
+                </td>
+                <td> 
+                  <p align="center" style="">
+                    <span>
+                      ${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}
+                    </span>
+                  </p>
+                </td>
+                <td> 
+                  <p align="center" style="">
+                    <span>
+                      ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}
+                    </span>
+                  </p>
+                </td>
+
+                <td> 
+                  <p align="center" style="">
+                    <span>
+                      ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}
+                    </span>
+                  </p>
+                </td>
+
+                <td> 
+                  <p align="center" style="">
+                    <span>
+                      ${companyInformation.url}
+                    </span>
+                  </p>
+                </td>
+              </tr>
+            </table>
+            <table width="100%" style="font-size: 6pt; table-layout: fixed;">
+              <tr>
+                <td></td>
+                <td align="center">
+                  <p >
+                    <span>Company.Wordmark</span>                                
+                  </p>
+                </td>
+                <td style= "padding-right: 30px;">
+                  <p align="right">
+                    <span float="right">Page: <pagenumber/></span>
+                  </p>
+                </td>
+              </tr>
+            </table>
+        </macro>
+
+        <macro id="nlheader2">
+          <table style="table-layout: fixed;" width="100%">
+
+            <tr>
+              <td>
+                <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
+              </td>
+            </tr>         
+
+          </table>
+
+          <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+            <tr>
+              <td width="60%">
+                <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+                  <tr>
+                    <td width="40%">
+                      <p>
+                        <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
+                      </p>
+                    </td>
+                    <td>
+                      <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p>
+                        <span>Version: </span>            
+                      </p>
+                    </td>
+                    <td>
+                      <span>1.0</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p>
+                        <span>Event Name: </span>            
+                      </p>
+                    </td>
+                    <td>
+                      <span>${record.custbody_show_table}</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p>
+                        <span>Prepared by: </span>            
+                      </p>
+                    </td>
+                    <td>
+                      <span>${record.salesrep}</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p>
+                        <span>Printed on: </span>            
+                      </p>
+                    </td>
+                    <td>
+                      <span>${.now}</span>
+                    </td>
+                  </tr>
+
+                </table>
+                
+              </td>
+              <td width="40%">
+                <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+
+                  <tr>
+                    <td colspan="2">
+                      <p>
+                        <span>${companyInformation.legalname}</span>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2">
+                      <p>
+                        <span>c/o ${record.custbody_ng_cs_event_venue}</span>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2">
+                      <p>
+                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        <span>Sales Phone: </span>
+                      </p>
+                    </td>
+                    <td>
+                      <p>
+                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <p>
+                        <span>Sales Fax: </span>
+                      </p>
+                    </td>
+                    <td>
+                      <p>
+                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                      </p>
+                    </td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>  
+
+                  
+
+          </table>
+        </macro>
+    </macrolist>
+    
+    <style type="text/css">
+      * {
+      <#if .locale == "zh_CN">
+        font-family: NotoSans, NotoSansCJKsc, sans-serif;
+      <#elseif .locale == "zh_TW">
+        font-family: NotoSans, NotoSansCJKtc, sans-serif;
+      <#elseif .locale == "ja_JP">
+        font-family: NotoSans, NotoSansCJKjp, sans-serif;
+      <#elseif .locale == "ko_KR">
+        font-family: NotoSans, NotoSansCJKkr, sans-serif;
+      <#elseif .locale == "th_TH">
+        font-family: NotoSans, NotoSansThai, sans-serif;
+      <#else>
+        font-family: NotoSans, sans-serif;
+      </#if>
+
+      }
+      
+      .titlePageHeaderLabel{
+        color: #9a7912;
+        font-size: 12pt;
+        font-family: Helvetica;
+        vertical-align: middle;
+      }
+      
+      .titlePageHeaderEventName{
+        color: black;
+        font-size: 24pt;
+        font-family: Helvetica;
+        vertical-align: middle;
+        margin-top: 15px;
+      }
+
+      .titlePageHeaderLabelSmall{
+        color: #9a7912;
+        font-size: 8pt;
+        font-family: Helvetica;
+        vertical-align: middle;
+      }
+      
+      .titlePageHeaderValueSmall{
+        color: black;
+        font-size: 12pt;
+        font-family: Helvetica;
+        vertical-align: middle;
+        margin-top: 15px;
+      }
+      
+    </style>
+  </head>
+  <body padding="0in 0in 0in 0in" size="Letter">
+
+    <#assign startDate = ''/>
+    <#assign endDate = ''/>
+
+    <#assign eventDays=[]/>
+
+    <#list record.item as item>
+      <#if item.custcol_ng_cs_event_sess_start_date?has_content>
+
+        <#assign lineStartDate = item.custcol_ng_cs_event_sess_start_date>
+
+        <#if !startDate?has_content>
+          <#assign startDate = lineStartDate>
+        <#elseif startDate?has_content>
+          <#assign difference = (lineStartDate?date?long / 86400000)?round - (startDate?date?long / 86400000)?round />
+
+          <#if difference lt 0>
+            <#assign startDate = lineStartDate/>
+          </#if>
+        </#if>
+
+      </#if>
+
+      <#if item.custcol_ng_cs_event_sess_end_date?has_content>
+
+        <#assign lineEndDate = item.custcol_ng_cs_event_sess_end_date>
+
+        <#if !endDate?has_content>
+          <#assign endDate = lineEndDate>
+        <#elseif startDate?has_content>
+          <#assign difference = (lineEndDate?date?long / 86400000)?round - (endDate?date?long / 86400000)?round />
+
+          <#if difference gt 0>
+            <#assign endDate = lineEndDate/>
+          </#if>
+        </#if>
+
+      </#if>
+
+      
+    </#list>   
+    
+    <table style="table-layout: fixed;" width="100%" height="350">
+
+      <tr>
+        <td>
+          <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="margin-top: 20px;">
+          <p style="margin-left: 50%; font-weight: bold; font-size: 12pt;">Event Services for:</p>
+          <p style="margin-left: 50%; font-weight: normal; font-size: 14pt;">${record.entity.altname}</p>
+
+        </td>
+      </tr>    
+
+    </table>
+
+    <table style="table-layout: fixed; page-break-after:always;" width="100%" height="50%">
+      <tr>
+        
+        <td width="50%" >          
+          <img src="${record.custbody_ng_cs_event_venue.custrecord_ng_cs_venue_cover_image_url}" width="100%" height="100%"/>
+        </td>
+
+        <td>
+          <table style="table-layout: fixed; margin-left: 50px; margin-top: 75px;" width="100%">
+            <tr>
+              <td>
+                <p>
+                  <span style="font-weight: bold; font-size:12pt;">${record.custbody_ng_cs_event_venue}</span>
+                  <br />
+                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${startDate}</span>
+                  <br />
+                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${endDate}</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="margin-top: 60px;">
+                <p>
+                  <span style="font-weight: bold; font-size:12pt;">Prepared by:</span>
+                  <br />
+                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${record.salesrep}</span>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+
+      </tr>
+    </table>
+
+    <pbr footer="nlfooter" footer-height="50"></pbr>
+
+    <table style="table-layout: fixed; " width="100%" height="100%">
+
+      <tr>
+        <td colspan="2">
+          <p align="center"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="133" /> </#if></p>
+        </td>
+      </tr>
+
+      <tr>
+
+        <td width="50%" style="padding:30px">
+          <p>
+            <span>Next generation Partnerships...</span>
+          </p>
+          <p>
+            <span style="font-size: 10px; line-height: 150%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+          </p>
+        </td>
+        
+        <td width="50%" >
+          <img src="https://tstdrv1516212.secure.netsuite.com/core/media/media.nl?id=16023&amp;c=TSTDRV1516212&amp;h=eUyN1Z_hosa0DQCXRdmS6TfrZT6lBYzXnZ5HY-W3-LyKerQU" width="100%" height="100%"/>
+        </td>
+      </tr>
+      <tr>
+
+        <td width="50%" >
+          <img src="https://tstdrv1516212.secure.netsuite.com/core/media/media.nl?id=16023&amp;c=TSTDRV1516212&amp;h=eUyN1Z_hosa0DQCXRdmS6TfrZT6lBYzXnZ5HY-W3-LyKerQU" width="100%" height="100%"/>
+        </td>
+
+        <td width="50%" style="padding:30px">
+          <p>
+            <span>Next generation Partnerships...</span>
+          </p>
+          <p>
+            <span style="font-size: 10px; line-height: 150%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+          </p>
+        </td>
+        
+        
+      </tr>
+
+      <tr>
+
+        <td width="50%" style="padding:30px">
+          <p>
+            <span>Next generation Partnerships...</span>
+          </p>
+          <p>
+            <span style="font-size: 10px; line-height: 150%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+          </p>
+        </td>
+        
+        <td width="50%" >
+          <img src="https://tstdrv1516212.secure.netsuite.com/core/media/media.nl?id=16023&amp;c=TSTDRV1516212&amp;h=eUyN1Z_hosa0DQCXRdmS6TfrZT6lBYzXnZ5HY-W3-LyKerQU" width="100%" height="100%"/>
+        </td>
+      </tr>
+
+      
+
+    </table>
+
+    <pbr header="nlheader2" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
+    <!--
+    <table style="table-layout: fixed;" width="100%">
+
+      <tr>
+        <td>
+          <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
+        </td>
+      </tr>         
+
+    </table>
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+      <tr>
+        <td width="60%">
+          <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+            <tr>
+              <td width="40%">
+                <p>
+                  <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
+                </p>
+              </td>
+              <td>
+                <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>
+                  <span>Version: </span>            
+                </p>
+              </td>
+              <td>
+                <span>1.0</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>
+                  <span>Event Name: </span>            
+                </p>
+              </td>
+              <td>
+                <span>${record.custbody_show_table}</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>
+                  <span>Prepared by: </span>            
+                </p>
+              </td>
+              <td>
+                <span>${record.salesrep}</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>
+                  <span>Printed on: </span>            
+                </p>
+              </td>
+              <td>
+                <span>${.now}</span>
+              </td>
+            </tr>
+
+          </table>
+          
+        </td>
+        <td width="40%">
+          <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+
+            <tr>
+              <td colspan="2">
+                <p>
+                  <span>${companyInformation.legalname}</span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <p>
+                  <span>c/o ${record.custbody_ng_cs_event_venue}</span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <p>
+                  <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <span>Sales Phone: </span>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>
+                  <span>Sales Fax: </span>
+                </p>
+              </td>
+              <td>
+                <p>
+                  <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                </p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>  
+
+            
+
+    </table>
+    -->
+    <!-- Event Overview -->
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+      <tr style="border-bottom: thin solid black;">
+        <td>
+          <p style="font-size: 16pt; font-weight: bold;">Event Overview</p>
+        </td>
+      </tr>
+
+    </table>
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; font-size: 8pt;" width="100%">
+      <tr style="border-bottom: thin solid black;">
+        <td width="50%">
+          <table style="table-layout: fixed;" width="100%">
+            <tr>
+              <td>
+                <p>
+                  <span >Customer:</span>
+                </p>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td>
+                <p>
+                  <span>${record.billaddress}</span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>
+                  <span>Primary Contact: </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <span>Phone: ${record.entity.phone}</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <span>Fax: ${record.entity.fax}</span>
+                </p>
+              </td>
+            </tr>           
+
+          </table>
+          
+        </td>
+        <td width="50%">
+          <table style="table-layout: fixed;" width="100%">
+            <tr>
+              <td>Master Account: </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sales Initials: </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PO Number: </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Terms: </td>
+              <td>${record.entity.terms}</td>
+            </tr>
+            <tr>
+              <td>Created By: </td>
+                <td>${record.salesrep}</td>
+            </tr>
+            <tr>
+              <td>Start Date: </td>
+              <td>${startDate}</td>
+            </tr>
+            <tr>
+              <td>End Date: </td>
+              <td>${endDate}</td>
+            </tr>
+          </table>
+        </td>
+      </tr> 
+    </table>
+
+    <#assign eventDays = [] />
+    <#list record.item as item>    
+
+      <#assign itemLineDays = item.custcol_ng_cs_session_days?split("<br />") />
+
+      <#list itemLineDays as lineDay>
+        
+
+        <#assign dayFound = false />
+        <#if lineDay?has_content && lineDay != ''>
+          <#list eventDays as eventDay>
+
+            <#if eventDay == lineDay>
+              <#assign dayFound = true />
+            </#if>
+          </#list>
+
+          <#if dayFound == false>
+              <#assign eventDays = eventDays + [lineDay] />
+          </#if>
+        </#if>
+
+      </#list>
+      
+    </#list>  
+    
+
+    <#assign sortedDates = [] />
+    
+    <#assign nextDate = '' />
+
+    <#list eventDays as eventDay> 
+
+      <#if nextDate = ''>
+        <#assign nextDate = eventDay />
+      </#if>
+
+          
+
+      <#list eventDays as eventDay2>
+
+       
+
+        <#assign dateFound = false />
+
+        <#list sortedDates as sortedDate>
+
+          <#if sortedDate == nextDate>
+            <#assign dateFound = true />
+          </#if>
+
+        </#list>
+
+        <#if dateFound = true >
+
+          <#assign nextDate = eventDay2 />
+
+          
+        </#if>
+
+        <#assign date1Number = (nextDate?date?long / 86400000)?round />
+
+        <#assign date2Number = (eventDay2?date?long / 86400000)?round />
+
+        
+
+        <#assign difference = (eventDay2?date?long / 86400000)?round - (nextDate?date?long / 86400000)?round />         
+
+          <#if difference lt 0>
+
+            <#assign dateFound = false />
+
+            <#list sortedDates as sortedDate>
+
+              <#if sortedDate == eventDay2>
+                <#assign dateFound = true />
+              </#if>
+
+            </#list>
+
+            <#if dateFound = false >
+
+              <#assign nextDate = eventDay2 />
+
+              
+            </#if>
+            
+          </#if>
+
+      </#list>
+
+      <#assign sortedDates = sortedDates + [nextDate] />
+
+      <#assign nextDate = '' />
+        
+    </#list> 
+
+    <#assign sessions=[]/>
+    <#assign equipmentCategories = []/>
+    <#assign salesCategories = []/>
+    <#assign laborCategories = [] />
+     
+    <#list record.item as item>
+
+      <#if item.itemType != 'Subtotal' && item.itemType != "Discount" && item.itemType != "Markup">
+
+        <#assign sessionFound = false/>
+        <#assign categoryFound = false/>
+        <#list sessions as session>
+          <#if session == item.custcol_ng_cs_event_session_line>
+            <#assign sessionFound=true/>
+          </#if>
+        </#list>
+
+        <#if item.custcol_ng_cs_item_sales_type == 'Equipment'>
+
+          <#list equipmentCategories as category>
+            <#if category == item.custcol_ng_cs_item_category>
+              <#assign categoryFound=true/>
+            </#if>
+          </#list>
+
+          <#if categoryFound == false>
+            <#if item.custcol_ng_cs_item_category?has_content>
+              <#assign equipmentCategories = equipmentCategories + [ item.custcol_ng_cs_item_category] />
+            </#if>
+          </#if>
+
+        <#elseif item.custcol_ng_cs_item_sales_type == 'Support'>
+
+          <#list laborCategories as category>
+            <#if category == item.custcol_ng_cs_item_category>
+              <#assign categoryFound=true/>
+            </#if>
+          </#list>
+
+          <#if categoryFound == false>
+            <#if item.custcol_ng_cs_item_category?has_content>
+              <#assign laborCategories = laborCategories + [ item.custcol_ng_cs_item_category] />
+            </#if>
+          </#if>
+
+        <#elseif item.custcol_ng_cs_item_sales_type == 'Sales'>
+
+          <#list salesCategories as category>
+            <#if category == item.custcol_ng_cs_item_category>
+              <#assign categoryFound=true/>
+            </#if>
+          </#list>
+
+          <#if categoryFound == false>
+            <#if item.custcol_ng_cs_item_category?has_content>
+              <#assign salesCategories = salesCategories + [ item.custcol_ng_cs_item_category] />
+            </#if>
+          </#if>
+
+        </#if>
+
+        <#if sessionFound == false>
+          <#if item.custcol_ng_cs_event_session_line?has_content>
+            <#assign sessions = sessions + [ item.custcol_ng_cs_event_session_line ] />
+          </#if>
+        </#if>
+
+      </#if>
+      
+      
+    </#list>
+    
+    <#assign eventData = {
+      "event" : record.custbody_show_table,
+      "venue" : record.custbody_ng_cs_event_venue,
+      "totalEquipmentAmount" : 0,
+      "totalEquipmentDiscount" : 0,
+      "totalLaborAmount" : 0,
+      "totalLaborDiscount" : 0,
+      "totalSalesAmount" : 0,
+      "totalSalesDiscount" : 0,
+      "totalServiceFeeAmount" : 0,
+      "totalDiscountAmount" : 0,
+      "totalSubtotalAmount" : 0,
+      "totalTaxAmount" : 0,
+      "total" : 0,
+      "dateData" : [] 
+      }
+    />
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; margin-top: 20px;" width="100%">
+      <tr style="font-weight:bold; font-size: 10pt;">
+        <th width="25%"><p>Room</p></th>
+        <th width="35%"><p>Session</p></th>
+        <th width="10%"><p>Date</p></th>
+        <th width="10%"><p>Start</p></th>
+        <th width="10%"><p>End</p></th>
+        <th width="10%" align="right"><p>Total</p></th>
+      </tr>      
+
+      
+
+      <#list sortedDates as currentDay>
+
+        <#assign dateSessionsData = {
+            "date" : currentDay,
+            "dayEquipmentAmount" : 0,
+            "dayEquipmentDiscount" : 0,
+            "dayLaborAmount" : 0,
+            "dayLaborDiscount" : 0,
+            "daySalesAmount" : 0,
+            "daySalesDiscount" : 0,
+            "dayServiceFeeAmount" : 0,
+            "dayDiscountAmount" : 0,
+            "daySubtotal" : 0,            
+            "dayTaxAmount" : 0,  
+            "dayTotal" : 0,          
+            "sessions" : []
+          } 
+        /> 
+
+        <#list sessions as session>
+
+          <#assign sessionData = {
+              "session" : session,
+              "room" : "",
+              "date" : currentDay,
+              "startTime" : "",
+              "endTime" : "",
+              "daySessionEquipmentAmount" : 0,
+              "daySessionEquipmentDiscount" : 0,              
+              "daySessionLaborAmount" : 0,
+              "daySessionLaborDiscount" : 0,
+              "daySessionSalesAmount" : 0,
+              "daySessionSalesDiscount" : 0,
+              "daySessionServiceFeeAmount" : 0,
+              "daySessionDiscountAmount" : 0,
+              "daySessionSubtotal" : 0,              
+              "daySessionTaxAmount" : 0,
+              "daySessionTotal" : 0,
+              "sessionItems" : []
+            }
+          />          
+
+          <#list record.item as item>
+
+            <#assign itemLineDays = item.custcol_ng_cs_session_days?split("<br />") />
+
+            <#list itemLineDays as lineDay>
+
+                <#if lineDay == currentDay>
+
+                  <#if item.itemType != 'Subtotal' && item.itemType != "Discount" && item.itemType != "Markup">
+
+                    <#if sessionData.startTime?string == ''>
+                      <#assign sessionData =  sessionData + {"startTime" : item.custcol_ng_cs_event_sess_start_time} />
+                    </#if>
+
+                    <#if sessionData.endTime?string == ''>
+                      <#assign sessionData =  sessionData + {"endTime" : item.custcol_ng_cs_event_sess_end_time} />
+                    </#if> 
+
+                    <#if sessionData.room?string = ''>
+                      <#assign sessionData = sessionData + {"room" : item.custcol_ng_cs_event_sess_ven_sp_name} /> 
+                    </#if>                 
+
+                    <#assign sessionItem = {                        
+                        "itemType" : item.itemType,
+                        "salesType" : item.custcol_ng_cs_item_sales_type,
+                        "item" : item.item,
+                        "amount" : (item.amount/item.custcol_ng_cs_days_number),
+                        "category" : item.custcol_ng_cs_item_category,
+                        "description" : item.description,
+                        "rate" : item.rate,
+                        "quantity" : (item.quantity/item.custcol_ng_cs_days_number),
+                        "numberOfDays" : item.custcol_ng_cs_days_number,
+                        "discountAmount" : (item.custcol_ng_cs_discount_amt/item.custcol_ng_cs_days_number),
+                        "note" : item.custcol_ng_cs_item_notes,
+                        "serviceFeeAmount" : (item.custcol_ng_cs_serv_fee_amt/item.custcol_ng_cs_days_number),
+                        "taxAmount" : (item.custcol_ng_cs_tax_amt/item.custcol_ng_cs_days_number),
+                        "taxRate" : item.custcol_ng_cs_tax_rate,
+                        "equpmentRec" : item.custcol_ng_cs_event_session_equip_rec,
+                        "laborRec" : item.custcol_ng_cs_event_session_task_rec,
+                        "stdHours" : item.custcol_ng_cs_task_hours,
+                        "otHours" : item.custcol_ng_cs_task_hours_ot,
+                        "dtHours" : item.custcol_ng_cs_task_hours_dt
+                      }
+                    />
+
+
+
+                    <#assign sessionItem = sessionItem + {"total" : sessionItem.amount - sessionItem.discountAmount + sessionItem.serviceFeeAmount + sessionItem.taxAmount} />
+
+                    <#if sessionItem.salesType == 'Equipment' && item.custcol_ng_cs_event_session_equip_rec?has_content>
+
+                      <#assign sessionData = sessionData + {"daySessionEquipmentAmount" : sessionData.daySessionEquipmentAmount + sessionItem.amount}/>
+
+                      <#assign sessionData = sessionData + {"daySessionEquipmentDiscount" : sessionData.daySessionEquipmentDiscount + sessionItem.discountAmount}/>
+
+                    </#if>
+
+                    <#if sessionItem.salesType == 'Sales' && item.custcol_ng_cs_event_session_equip_rec?has_content>
+
+                      <#assign sessionData = sessionData + {"daySessionSalesAmount" : sessionData.daySessionSalesAmount + sessionItem.amount}/>
+
+                      <#assign sessionData = sessionData + {"daySessionSalesDiscount" : sessionData.daySessionSalesDiscount + sessionItem.discountAmount}/>
+
+                    </#if>
+
+                    <#if sessionItem.salesType == 'Support' && item.custcol_ng_cs_event_session_task_rec?has_content>
+
+                      <#assign sessionData = sessionData + {"daySessionLaborAmount" : sessionData.daySessionLaborAmount + sessionItem.amount}/>
+
+                      <#assign sessionData = sessionData + {"daySessionLaborDiscount" : sessionData.daySessionLaborDiscount + sessionItem.discountAmount}/>
+
+                    </#if>
+
+                    <#assign sessionData = sessionData + {"daySessionServiceFeeAmount" : sessionData.daySessionServiceFeeAmount + sessionItem.serviceFeeAmount}/>
+
+                    <#assign sessionData = sessionData + {"daySessionDiscountAmount" : sessionData.daySessionDiscountAmount + sessionItem.discountAmount}/>
+
+                    <#assign sessionData = sessionData + {"daySessionSubtotal" : sessionData.daySessionSubtotal + sessionItem.amount + sessionItem.serviceFeeAmount}/>
+
+                    <#assign sessionData = sessionData + {"daySessionTaxAmount" : sessionData.daySessionTaxAmount + sessionItem.taxAmount}/>
+
+                    <#assign sessionData = sessionData + {"daySessionTotal" : sessionData.daySessionTotal + sessionItem.total}/>
+
+                    <#assign sessionData = sessionData + {"sessionItems" : sessionData.sessionItems + [sessionItem]}/>
+
+                    
+                    <!-- 
+                    <tr><td colspan="6" style="font-size: 8pt">
+                      <#list sessionItem?keys as key> 
+                        ${key} = ${sessionItem[key]}<br />
+                      </#list>
+                    </td></tr>
+                    -->
+                  </#if>
+
+
+
+                </#if>
+            </#list>
+
+          
+            
+          </#list>
+
+
+
+          <tr style="font-size: 8pt; padding-top: 5px;">
+
+            <td><p>${sessionData.room}</p></td>
+            <td><p>${sessionData.session}</p></td>
+            <td><p>${sessionData.date}</p></td>
+            <td><p>${sessionData.startTime}</p></td>
+            <td><p>${sessionData.endTime}</p></td>
+            <td align="right"><p>${sessionData.daySessionTotal?string.currency}</p></td>
+          </tr>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayEquipmentAmount" : dateSessionsData.dayEquipmentAmount + sessionData.daySessionEquipmentAmount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayEquipmentDiscount" : dateSessionsData.dayEquipmentDiscount + sessionData.daySessionEquipmentDiscount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayLaborAmount" : dateSessionsData.dayLaborAmount + sessionData.daySessionLaborAmount}/>          
+
+          <#assign dateSessionsData = dateSessionsData + {"dayLaborDiscount" : dateSessionsData.dayLaborDiscount + sessionData.daySessionLaborDiscount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"daySalesAmount" : dateSessionsData.daySalesAmount + sessionData.daySessionSalesAmount}/>          
+
+          <#assign dateSessionsData = dateSessionsData + {"daySalesDiscount" : dateSessionsData.daySalesDiscount + sessionData.daySessionSalesDiscount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayServiceFeeAmount" : dateSessionsData.dayServiceFeeAmount + sessionData.daySessionServiceFeeAmount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayDiscountAmount" : dateSessionsData.dayDiscountAmount + sessionData.daySessionDiscountAmount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"daySubtotal" : dateSessionsData.daySubtotal + sessionData.daySessionSubtotal}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayTaxAmount" : dateSessionsData.dayTaxAmount + sessionData.daySessionTaxAmount}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"dayTotal" : dateSessionsData.dayTotal + sessionData.daySessionTotal}/>
+
+          <#assign dateSessionsData = dateSessionsData + {"sessions" : dateSessionsData.sessions + [sessionData]}/>
+            
+
+            <tr style="font-size: 8pt; padding-bottom: 20px;">
+              <td colspan="2" align="right" style="padding-right: 10px; font-weight: bold; font-size: 8pt;">
+                Day Total:
+              </td>
+              <td style="border-top: thin solid black;">${dateSessionsData.date}</td>
+              <td colspan="3" align="right" style="border-top: thin solid black;">${dateSessionsData.dayTotal?string.currency}</td>
+            </tr>
+        </#list>
+
+        <#assign eventData = eventData + {"totalEquipmentAmount" : eventData.totalEquipmentAmount + dateSessionsData.dayEquipmentAmount}/>        
+
+        <#assign eventData = eventData + {"totalEquipmentDiscount" : eventData.totalEquipmentDiscount + dateSessionsData.dayEquipmentDiscount}/>
+
+        <#assign eventData = eventData + {"totalLaborAmount" : eventData.totalLaborAmount + dateSessionsData.dayLaborAmount}/>
+
+        <#assign eventData = eventData + {"totalLaborDiscount" : eventData.totalLaborDiscount + dateSessionsData.dayLaborDiscount}/>
+
+        <#assign eventData = eventData + {"totalSalesAmount" : eventData.totalSalesAmount + dateSessionsData.daySalesAmount}/>
+
+        <#assign eventData = eventData + {"totalSalesDiscount" : eventData.totalLaborDiscount + dateSessionsData.daySalesDiscount}/>
+
+        <#assign eventData = eventData + {"totalServiceFeeAmount" : eventData.totalServiceFeeAmount + dateSessionsData.dayServiceFeeAmount}/>
+
+        <#assign eventData = eventData + {"totalDiscountAmount" : eventData.totalDiscountAmount + dateSessionsData.dayDiscountAmount}/>
+
+        <#assign eventData = eventData + {"totalSubtotalAmount" : eventData.totalSubtotalAmount + dateSessionsData.daySubtotal}/>
+
+        <#assign eventData = eventData + {"totalTaxAmount" : eventData.totalTaxAmount + dateSessionsData.dayTaxAmount}/>
+
+        <#assign eventData = eventData + {"total" : eventData.total + dateSessionsData.dayTotal}/>
+
+        <#assign eventData = eventData + {"dateData" : eventData.dateData + [dateSessionsData]}/>
+
+      </#list>
+
+
+
+    </table>
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; margin-top: 40px; font-size: 8pt;" width="100%">
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; padding-right: 10px;" width="15%" align="right"><p>Equipment:</p></td>
+        <td align="right" width="20%">${eventData.totalEquipmentAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; padding-right: 10px;" width="15%" align="right"><p>Support:</p></td>        
+        <td align="right" width="20%">${eventData.totalLaborAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; font-size: 8pt; padding-right: 10px;" width="15%" align="right"><p>Sales:</p></td>
+        <td align="right" width="20%">${eventData.totalSalesAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; font-size: 8pt; padding-right: 10px;" width="15%" align="right"><p>Service Fee:</p></td>
+        <td align="right" width="20%">${eventData.totalServiceFeeAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; font-size: 8pt; padding-right: 10px;" width="15%" align="right"><p>Discount:</p></td>
+        <td align="right" width="20%">(${eventData.totalDiscountAmount?string.currency})</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; padding-right: 10px; border-bottom: thin solid black;" width="15%" align="right"><p>Tax:</p></td>
+        <td align="right" width="20%" style="border-bottom: thin solid black;">${eventData.totalTaxAmount?string.currency}</td>
+      </tr>
+
+      <tr>
+        <td  width="70%"></td>
+        <td style="font-weight: bold; padding-right: 10px;" width="10%" align="right"><p>Total:</p></td>
+        <td align="right" width="20%">${eventData.total?string.currency}</td>
+      </tr>
+    </table>
+
+    <pbr header="nlheader2" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
+
+    <!-- Event Rental Items, Services, and Labor Detail -->
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+      <tr style="border-bottom: thin solid black;">
+        <td colspan="8">
+          <p style="font-size: 16pt; font-weight: bold;">Rental Items, Services, and Support Detail</p>
+        </td>
+      </tr>
+    </table>
+
+    <#list eventData.dateData as dayData>
+
+      <#list dayData.sessions as sessionData>
+
+        <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; border-bottom: thin dotted black; font-size: 8pt; page-break-inside: avoid;" width="100%">
+          <tr style="font-size: 8pt;">
+            <td width="8%">
+              <p style="font-weight: bold;">
+                Room:
+              </p>
+            </td>
+
+            <td width="45%">
+              <p>
+                ${sessionData.room}
+              </p>
+            </td>
+
+            <td width="5%">
+              <p style="font-weight: bold;">
+                Date:
+              </p>
+            </td>
+
+            <td width="10%">
+              <p>
+                ${dayData.date}
+              </p>
+            </td>
+
+            <td width="5%"></td>
+            <td width="10%"></td>
+
+            <td width="7%">
+              <p align="right" style="font-weight: bold;">
+                Total:
+              </p>
+            </td>
+
+            <td width="10%">
+              <p align="right">
+                ${sessionData.daySessionTotal?string.currency}
+              </p>
+            </td>
+
+          </tr>
+
+          <tr>
+            
+            <td width="8%">
+              <p style="font-weight: bold;">
+                Meeting:
+              </p>
+            </td>
+
+            <td width="45%">
+              <p align="left">
+                ${sessionData.session}
+              </p>
+            </td>
+
+            <td width="5%">
+              <p style="font-weight: bold;">
+                Start:
+              </p>
+            </td>
+
+            <td width="10%">
+              <p align="left">
+                ${sessionData.startTime}
+              </p>
+            </td>
+
+            <td width="5%">
+              <p style="font-weight: bold;">End:</p>
+            </td>
+
+            <td width="10%">
+              <p align="left">
+                ${sessionData.endTime}
+              </p>
+            </td>
+
+            <td colspan="2"></td>
+
+          </tr>
+
+        </table>
+
+        <#assign equipmentItemFound = false/>
+
+        <#list sessionData.sessionItems as item>
+
+          <#if item.salesType == 'Equipment'>
+
+            <#assign equipmentItemFound = true/>
+
+            <#break/>
+
+          </#if>
+
+        </#list>
+
+        <#if equipmentItemFound>
+
+          <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; font-size: 8pt;" width="100%">
+
+            <tr style="font-size: 8pt; border-bottom: thin dotted black; page-break-after: avoid;">
+
+              <td width="50%">
+                <p style="font-weight: bold;">
+                  Description
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Qty
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Rate
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Price
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Disc.
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Total
+                </p>
+              </td>
+
+            </tr>
+
+            <#list equipmentCategories as category>
+
+              <#assign categoryFound = false/>
+
+              <#list sessionData.sessionItems as item>
+
+                <#if item.category == category>
+
+                  <#assign categoryFound = true/>
+
+                  <#break/>
+
+                </#if>
+
+              </#list>
+
+              <#if categoryFound>
+
+                <tr>
+                  <td colspan="6">
+                    <p align="left" style="font-weight: bold;">
+                      ${category}
+                    </p>
+                  </td>
+                </tr>
+
+                <#list sessionData.sessionItems as item>
+
+                  <#if item.category == category && item.salesType == 'Equipment'>
+                    <tr>
+                      <td>
+                        <p align="left" style="padding-left: 10px;">
+                          ${item.item}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.quantity}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.rate?string.currency}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.amount?string.currency}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          <#if item.discountAmount?has_content && item.discountAmount?number gt 0>
+                            (${item.discountAmount?string.currency})
+                          </#if>                      
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          <#assign itemTotal = item.amount?number - item.discountAmount?number />
+                          ${itemTotal?string.currency}
+                        </p>
+                      </td>
+                    </tr>
+
+                    <#if item.note?has_content>
+                      <tr>
+                        <td colspan="6">
+                          <p align="left" style="padding-left: 20px;">
+                            <b>Comments:&nbsp;&nbsp;</b>${item.note}
+                          </p>
+                        </td>
+                      </tr>
+                    </#if>
+                  </#if>
+                  
+                </#list>
+
+              </#if>              
+
+            </#list>
+
+            <tr style="padding-bottom: 30px;">
+
+              <td></td>
+              <td colspan="5" style="border-top: thin solid black;">
+                <table width="100%" style="font-size: 8pt;">
+                  <tr>                  
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Equipment Total:
+                      </p>
+                    </td>
+                    <td>
+                      <p align="right">
+                        ${sessionData.daySessionEquipmentAmount?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Equipment Discount:
+                      </p>
+                    </td>
+                    <td>
+                      <p align="right">
+                        ${sessionData.daySessionEquipmentDiscount?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Equipment Net:
+                      </p>
+                    </td>
+                    <#assign equipmentNet = sessionData.daySessionEquipmentAmount - sessionData.daySessionEquipmentDiscount/>
+                    <td>
+                      <p align="right">
+                        ${equipmentNet?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+            </tr>
+
+          </table>
+
+        </#if>
+
+        <#assign salesItemFound = false/>
+
+        <#list sessionData.sessionItems as item>
+
+          <#if item.salesType == 'Sales'>
+
+            <#assign salesItemFound = true/>
+
+            <#break/>
+
+          </#if>
+
+        </#list>
+
+        <#if salesItemFound>
+
+          <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; font-size: 8pt;" width="100%">
+
+            <tr style="font-size: 8pt; border-bottom: thin dotted black; page-break-after: avoid;">
+
+              <td width="50%">
+                <p style="font-weight: bold;">
+                  Description
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Qty
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Rate
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Price
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Disc.
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Total
+                </p>
+              </td>
+
+            </tr>
+
+            <#list salesCategories as category>
+
+              <#assign categoryFound = false/>
+
+              <#list sessionData.sessionItems as item>
+
+                <#if item.category == category>
+
+                  <#assign categoryFound = true/>
+
+                  <#break/>
+
+                </#if>
+
+              </#list>
+
+              <#if categoryFound>
+
+                <tr>
+                  <td colspan="6">
+                    <p align="left" style="font-weight: bold;">
+                      ${category}
+                    </p>
+                  </td>
+                </tr>
+
+                <#list sessionData.sessionItems as item>
+
+                  <#if item.category == category && item.salesType == 'Sales'>
+                    <tr>
+                      <td>
+                        <p align="left" style="padding-left: 10px;">
+                          ${item.item}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.quantity}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.rate?string.currency}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.amount?string.currency}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          <#if item.discountAmount?has_content && item.discountAmount?number gt 0>
+                            (${item.discountAmount?string.currency})
+                          </#if>                      
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          <#assign itemTotal = item.amount?number - item.discountAmount?number />
+                          ${itemTotal?string.currency}
+                        </p>
+                      </td>
+                    </tr>
+
+                    <#if item.note?has_content>
+                      <tr>
+                        <td colspan="6">
+                          <p align="left" style="padding-left: 20px;">
+                            <b>Comments:&nbsp;&nbsp;</b>${item.note}
+                          </p>
+                        </td>
+                      </tr>
+                    </#if>
+                  </#if>
+                  
+                </#list>
+
+              </#if>              
+
+            </#list>
+
+            <tr style="padding-bottom: 30px;">
+
+              <td></td>
+              <td colspan="5" style="border-top: thin solid black;">
+                <table width="100%" style="font-size: 8pt;">
+                  <tr>                  
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Sales Total:
+                      </p>
+                    </td>
+                    <td>
+                      <p align="right">
+                        ${sessionData.daySessionSalesAmount?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Sales Discount:
+                      </p>
+                    </td>
+                    <td>
+                      <p align="right">
+                        ${sessionData.daySessionSalesDiscount?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Sales Net:
+                      </p>
+                    </td>
+                    <#assign salesNet = sessionData.daySessionSalesAmount - sessionData.daySessionSalesDiscount/>
+                    <td>
+                      <p align="right">
+                        ${salesNet?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+            </tr>
+
+          </table>
+
+        </#if>
+
+        <#assign laborItemFound = false/>
+
+        <#list sessionData.sessionItems as item>
+
+          <#if item.salesType == 'Support'>
+
+            <#assign laborItemFound = true/>
+
+            <#break/>
+
+          </#if>
+
+        </#list>
+
+        <#if laborItemFound>
+
+          <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; font-size: 8pt;" width="100%">
+
+            <tr style="font-size: 8pt; border-bottom: thin dotted black; page-break-after: avoid;">
+
+              <td width="40%">
+                <p style="font-weight: bold;">
+                  Description
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Staff
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Rate
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  STD Hours
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  OT Hours
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  DT Hours
+                </p>
+              </td>
+
+              <td width="10%">
+                <p align="right" style="font-weight: bold;">
+                  Total
+                </p>
+              </td>
+
+            </tr>
+
+            <#list laborCategories as category>
+
+              <#assign categoryFound = false/>
+
+              <#list sessionData.sessionItems as item>
+
+                <#if item.category == category>
+
+                  <#assign categoryFound = true/>
+
+                  <#break/>
+
+                </#if>
+
+              </#list>
+
+              <#if categoryFound>
+
+                <tr>
+                  <td colspan="6">
+                    <p align="left" style="font-weight: bold;">
+                      ${category}
+                    </p>
+                  </td>
+                </tr>
+
+                <#list sessionData.sessionItems as item>
+
+                  <#if item.category == category && item.salesType == 'Support'>
+                    <tr>
+                      <td>
+                        <p align="left" style="padding-left: 10px;">
+                          ${item.item}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.quantity}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.rate?string.currency}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.stdHours}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.otHours}                     
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.dtHours}
+                        </p>
+                      </td>
+
+                      <td>
+                        <p align="right">
+                          ${item.amount?string.currency}
+                        </p>
+                      </td>
+                    </tr>
+
+                    <#if item.note?has_content>
+                      <tr>
+                        <td colspan="7">
+                          <p align="left" style="padding-left: 20px;">
+                            <b>Comments:&nbsp;&nbsp;</b>${item.note}
+                          </p>
+                        </td>
+                      </tr>
+                    </#if>
+                  </#if>
+                  
+                </#list>
+
+              </#if>
+              
+
+            </#list>
+
+            <tr style="padding-bottom: 30px;">
+
+              <td></td>
+              <td colspan="6" style="border-top: thin solid black;">
+                <table width="100%" style="font-size: 8pt;">
+                  <tr>                  
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Support Total:
+                      </p>
+                    </td>
+                    <td>
+                      <p align="right">
+                        ${sessionData.daySessionLaborAmount?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                  <#if sessionData.daySessionLaborDiscount gt 0>
+                    <tr>
+                      
+                      <td style="font-weight: bold; padding-left: 175px">
+                        <p align="left">
+                          Support Discount:
+                        </p>
+                      </td>
+                      <td>
+                        <p align="right">
+                          ${sessionData.daySessionLaborDiscount?string.currency}
+                        </p>
+                      </td>
+                    </tr>
+                </#if>
+                  <tr>
+                    
+                    <td style="font-weight: bold; padding-left: 175px">
+                      <p align="left">
+                        Support Net:
+                      </p>
+                    </td>
+                    <#assign laborNet = sessionData.daySessionLaborAmount - sessionData.daySessionLaborDiscount/>
+                    <td>
+                      <p align="right">
+                        ${laborNet?string.currency}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+            </tr>
+
+          </table>
+
+        </#if>
+
+        
+
+      </#list>
+
+    </#list>
+
+    
+
+    <pbr header="nlheader2" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
+
+    <!-- Terms and Conditions -->
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+      <tr style="border-bottom: thin solid black;">
+        <td>
+          <p style="font-size: 16pt; font-weight: bold;">Terms &amp; Conditions</p>
+        </td>
+      </tr>
+
+      <tr style="padding-top: 10px;">
+        <td>
+          <p style="font-size: 8pt; padding-left: 10px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus sed viverra tellus in hac habitasse platea. Arcu odio ut sem nulla pharetra diam sit amet. Et netus et malesuada fames ac turpis egestas sed. Id diam vel quam elementum pulvinar etiam. Vel pharetra vel turpis nunc eget lorem. Commodo odio aenean sed adipiscing. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Pellentesque elit ullamcorper dignissim cras tincidunt. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Enim facilisis gravida neque convallis a cras semper auctor neque. Blandit turpis cursus in hac habitasse platea dictumst quisque. Sollicitudin aliquam ultrices sagittis orci a. Et ligula ullamcorper malesuada proin libero nunc. Et netus et malesuada fames ac turpis egestas sed. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec.<br /><br />
+
+Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi. Facilisi nullam vehicula ipsum a. Integer enim neque volutpat ac tincidunt vitae semper. Eget nunc lobortis mattis aliquam faucibus purus in massa. Ullamcorper malesuada proin libero nunc consequat interdum. A cras semper auctor neque. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Faucibus purus in massa tempor nec feugiat. Tortor condimentum lacinia quis vel eros donec ac odio. Ut aliquam purus sit amet. A diam maecenas sed enim ut sem.<br /><br />
+
+Ut etiam sit amet nisl. Amet tellus cras adipiscing enim eu. Amet venenatis urna cursus eget nunc scelerisque viverra mauris. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Enim nec dui nunc mattis enim ut tellus elementum. Viverra tellus in hac habitasse platea. Sed tempus urna et pharetra pharetra massa. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Id leo in vitae turpis massa sed. Arcu non sodales neque sodales. Ut venenatis tellus in metus vulputate eu. Pharetra convallis posuere morbi leo. Eu volutpat odio facilisis mauris sit amet massa vitae. Semper eget duis at tellus at urna condimentum mattis. A scelerisque purus semper eget duis at tellus at. Maecenas pharetra convallis posuere morbi.
+          </p>
+          
+        </td>
+      </tr>
+
+    </table>
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; margin-top: 40px; font-size: 8pt;" width="100%">
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; padding-right: 10px;" width="15%" align="right"><p>Equipment:</p></td>
+        <td align="right" width="20%">${eventData.totalEquipmentAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; padding-right: 10px;" width="15%" align="right"><p>Support:</p></td>        
+        <td align="right" width="20%">${eventData.totalLaborAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; font-size: 8pt; padding-right: 10px;" width="15%" align="right"><p>Sales:</p></td>
+        <td align="right" width="20%">${eventData.totalSalesAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; font-size: 8pt; padding-right: 10px;" width="15%" align="right"><p>Service Fee:</p></td>
+        <td align="right" width="20%">${eventData.totalServiceFeeAmount?string.currency}</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; font-size: 8pt; padding-right: 10px;" width="15%" align="right"><p>Discount:</p></td>
+        <td align="right" width="20%">(${eventData.totalDiscountAmount?string.currency})</td>
+      </tr>
+
+      <tr style="padding-bottom: 15px;">
+        <td width="65%"></td>
+        <td style="font-weight: bold; padding-right: 10px; border-bottom: thin solid black;" width="15%" align="right"><p>Tax:</p></td>
+        <td align="right" width="20%" style="border-bottom: thin solid black;">${eventData.totalTaxAmount?string.currency}</td>
+      </tr>
+
+      <tr>
+        <td  width="70%"></td>
+        <td style="font-weight: bold; padding-right: 10px;" width="10%" align="right"><p>Total:</p></td>
+        <td align="right" width="20%">${eventData.total?string.currency}</td>
+      </tr>
+    </table>
+
+    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px; margin-top: 10px; font-size: 8pt;" width="100%">
+      <tr>
+        <td width="30%">
+          <p style="font-weight: bold">
+            Signatures(s):
+          </p>
+        </td>
+        <td width="5%"></td>
+        <td width="20%">
+          <p style="font-weight: bold;">
+            Date:
+          </p>
+        </td>
+        <td width="45%"></td>
+      </tr>
+
+      <tr style="padding-top: 40px;">
+        <td width="30%" style="border-bottom: thin solid black;">
+          
+        </td>
+        <td width="5%"></td>
+        <td width="20%" style="border-bottom: thin solid black;">
+          
+        </td>
+        <td width="45%"></td>
+      </tr>
+
+      <tr style="padding-top: 40px;">
+        <td width="30%" style="border-bottom: thin solid black;">
+          
+        </td>
+        <td width="5%"></td>
+        <td width="20%">
+          
+        </td>
+        <td width="45%"></td>
+      </tr>
+    </table>
+    
+  
+  </body>
+</pdf>
