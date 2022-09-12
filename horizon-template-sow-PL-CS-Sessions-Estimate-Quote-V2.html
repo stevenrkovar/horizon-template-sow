@@ -323,57 +323,43 @@
       
     </#list>   
     
-    <table style="table-layout: fixed;" width="100%" height="350">
+    <table style="table-layout: fixed;" width="100%">
 
       <tr>
         <td>
-          <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
-        </td>
-      </tr>
 
-      <tr>
-        <td style="margin-top: 20px;">
-          <p style="margin-left: 50%; font-weight: bold; font-size: 12pt;">Event Services for:</p>
-          <p style="margin-left: 50%; font-weight: normal; font-size: 14pt;">${record.entity.altname}</p>
-
-        </td>
-      </tr>    
-
-    </table>
-
-    <table style="table-layout: fixed; page-break-after:always;" width="100%" height="50%">
-      <tr>
-        
-        <td width="50%" >          
-          <img src="${record.custbody_ng_cs_event_venue.custrecord_ng_cs_venue_cover_image_url}" width="100%" height="100%"/>
-        </td>
-
-        <td>
-          <table style="table-layout: fixed; margin-left: 50px; margin-top: 75px;" width="100%">
+          <table width="100%" height="150">
             <tr>
-              <td>
-                <p>
-                  <span style="font-weight: bold; font-size:12pt;">${record.custbody_ng_cs_event_venue}</span>
-                  <br />
-                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${startDate}</span>
-                  <br />
-                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${endDate}</span>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td style="margin-top: 60px;">
-                <p>
-                  <span style="font-weight: bold; font-size:12pt;">Prepared by:</span>
-                  <br />
-                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${record.salesrep}</span>
-                </p>
-              </td>
+            	<td width="50%" style="padding: 20px" >
+          			<p><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
+              	</td>
+              	<td width="50%" style="border-left: 3px solid #8E7530; padding: 20px">
+                  	<p style="font-weight: bold; font-size: 12pt;">Event Services for:</p>
+          			<!-- <p style="font-weight: normal; font-size: 14pt;">${record.entity.altname}</p>-->
+                    <p>
+                  		<span style="font-weight: bold; font-size:12pt;">${record.custbody_ng_cs_event_venue}</span>
+                  		<br />
+                  		<span style="font-weight: normal; font-size:12pt;">${startDate}</span>
+                  		<br />
+                  		<span style="font-weight: normal; font-size:12pt;">${endDate}</span>
+                	</p>
+                    <p>
+                      <span style="font-weight: bold; font-size:12pt;">Prepared by:</span>
+                      <br />
+                      <span style="font-weight: normal; font-size:12pt;">${record.salesrep}</span>
+                    </p>
+              	</td>
             </tr>
           </table>
-        </td>
 
+        </td>
       </tr>
+      <tr>
+        <td width="100%" >
+          <img src="${record.custbody_ng_cs_event_venue.custrecord_ng_cs_venue_cover_image_url}" dpi="200"/>
+        </td>
+      </tr>
+
     </table>
 
     <pbr footer="nlfooter" footer-height="50"></pbr>
