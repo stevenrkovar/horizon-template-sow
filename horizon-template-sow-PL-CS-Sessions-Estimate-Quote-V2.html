@@ -323,7 +323,7 @@
           <table width="100%" height="150">
             <tr>
             	<td width="50%" style="padding: 20px" >
-          			<p align="center"><#if companyInformation.logoUrl?length != 0><img height="40" src="https://7559516.app.netsuite.com/core/media/media.nl?id=5282&c=7559516&h=wHucQsZZVQa5rqpnBLTZLXfuCFXLopwNpC2wGbdBupoUvqHw&fcts=20220912181517&whence=" width="150" /> </#if></p>
+          			<p align="center"><#if companyInformation.logoUrl?length != 0><img height="40" src="https://7559516.app.netsuite.com/core/media/media.nl?id=5282&amp;c=7559516&amp;h=wHucQsZZVQa5rqpnBLTZLXfuCFXLopwNpC2wGbdBupoUvqHw&amp;fcts=20220912181517&amp;whence=" width="150" /> </#if></p>
               	</td>
               	<td width="50%" style="border-left: 3px solid #8E7530; padding: 20px">
                   	<p style=" font-size: 10pt; text-transform: uppercase; color: #9B7912">Event Services for</p>
@@ -376,18 +376,29 @@ acceptance timelines.   </span>
 			<table>
               <tr>
               	<td style="padding: 20px; background-color: beige">
-                   <p>
-                    <span style="font-size: 18pt;">SOW Schedule.</span>
-                  </p>
-                  <p><span style="font-size: 11pt;">
-                    Scope of Work Submission Date: [Insert Date]<br/>
-					Scope of Work Acceptance Deadline: [30 Days in Advance of Start Date]<br/>
-					Advanced Discount Acceptance Deadline: [60 days in Advance of Start Date]* if applicable 
-                    </span>
-                  </p>
+                  <table >
+                    <tr>
+                    	<td colspan="2">                   
+                          <p text-align="left"><span style="font-size: 16pt;">SOW Schedule</span></p>
+                      	</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 6px 0;"><p text-align="left"><span style="font-size: 10pt;">Scope of Work Submission Date</span></p></td>
+                       <td style="padding: 6px 0;"><p text-align="left"><span style="font-size: 10pt;">[Insert Date]</span></p></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 6px 0;"><p text-align="left"><span style="font-size: 10pt;">Scope of Work Acceptance Deadline</span></p></td>
+                      <td style="padding: 6px 0;"><p text-align="left"><span style="font-size: 10pt;">[30 Days in Advance of Start]</span></p></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 6px 0;"><p text-align="left"><span style="font-size: 10pt;">Advanced Discount Acceptance Deadline</span></p></td>
+                      <td style="padding: 6px 0;"><p text-align="left"><span style="font-size: 10pt;">[60 days in Advance of Start]* if applicable</span></p></td>
+                    </tr>
+                  </table>
+
                 </td>
               </tr>
-          </table>
+          	</table>
         </td>
       </tr>
       <tr>
