@@ -26,7 +26,7 @@
         </macro>
 
         <macro id="nlfooter2">
-            <table width="100%" style="font-size: 6pt; table-layout: fixed;">
+            <table width="100%" style="font-size: 7pt; table-layout: fixed;">
               <tr>
                 <td> 
                   <p align="left" style="padding-left: 30px;">
@@ -43,16 +43,9 @@
                   </p>
                 </td>
                 <td> 
-                  <p align="left" style="">
+                  <p align="center" style="">
                     <span>
-                      T: ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}
-                    </span>
-                  </p>
-                </td>
-
-                <td> 
-                  <p align="left" style="">
-                    <span>
+                      P: ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}<br/>
                       F: ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}
                     </span>
                   </p>
@@ -83,138 +76,146 @@
         </macro>
 
         <macro id="nlheader2">
-          <table style="table-layout: fixed;" width="100%">
-
+          
+          <table width="100%" style="background-color: beige; margin-bottom: 10pt;">
             <tr>
               <td>
-                <p align="right" style="padding: 20px 20px 0 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
-              </td>
-            </tr>         
+                <table style="table-layout: fixed;" width="100%">
 
-          </table>
-
-          <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
-
-            <tr>
-              <td width="60%">
-                <table style="table-layout: fixed; font-size: 8pt;" width="100%">
                   <tr>
+                    <td>
+                      <p align="right" style="padding: 20px 20px 0 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
+                    </td>
+                  </tr>         
+
+                </table>
+
+                <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+                  <tr>
+                    <td width="60%">
+                      <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+                        <tr>
+                          <td width="40%">
+                            <p>
+                              <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Version: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>1.0</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Event Name: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${record.custbody_show_table}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Prepared by: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${record.salesrep}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Printed on: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${.now}</span>
+                          </td>
+                        </tr>
+
+                      </table>
+
+                    </td>
                     <td width="40%">
-                      <p>
-                        <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
-                    </td>
-                  </tr>
+                      <table style="table-layout: fixed; font-size: 8pt;" width="100%">
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Version: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>1.0</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>${companyInformation.legalname}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Event Name: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>${record.custbody_show_table}</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>c/o ${record.custbody_ng_cs_event_venue}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Prepared by: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>${record.salesrep}</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Sales Phone: </span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Printed on: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>${.now}</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Sales Fax: </span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                </table>
-                
-              </td>
-              <td width="40%">
-                <table style="table-layout: fixed; font-size: 8pt;" width="100%">
-
-                  <tr>
-                    <td colspan="2">
-                      <p>
-                        <span>${companyInformation.legalname}</span>
-                      </p>
+                      </table>
                     </td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="2">
-                      <p>
-                        <span>c/o ${record.custbody_ng_cs_event_venue}</span>
-                      </p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="2">
-                      <p>
-                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Sales Phone: </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p>
-                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
-                      </p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Sales Fax: </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p>
-                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
-                      </p>
-                    </td>
-                  </tr>
+                  </tr>  
 
                 </table>
+
               </td>
-            </tr>  
-
-                  
-
+            </tr>
           </table>
+          
+
         </macro>
     </macrolist>
     
