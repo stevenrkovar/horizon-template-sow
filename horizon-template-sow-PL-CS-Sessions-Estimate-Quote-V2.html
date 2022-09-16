@@ -18,35 +18,25 @@
             <table width="100%">
               <tr>
                 <td>
-                <!--<p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>-->
-                
-
-                  <p align="left" style="padding-left: 30px;">
-                    <span>
-                      Wordmark Here
-                    </span>
-                  </p>
-
-                
-       
-
+                  	<div position="absolute" width="100%" style="padding-top: 15pt;"><p align="center" ><span style="color:#8E7530">www.pinnaclelive.com</span></p></div>
+					<p align="right" style="padding: 0 20px 20px 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
                 </td>
               </tr>
             </table>
         </macro>
 
         <macro id="nlfooter2">
-            <table width="100%" style="font-size: 6pt; table-layout: fixed;">
+            <table width="100%" style="font-size: 7pt; table-layout: fixed;">
               <tr>
                 <td> 
-                  <p align="center" style="">
+                  <p align="left" style="padding-left: 30px;">
                     <span>
                       ${record.custbody_ng_cs_event_venue}
                     </span>
                   </p>
                 </td>
                 <td> 
-                  <p align="center" style="">
+                  <p align="left" style="">
                     <span>
                       ${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}
                     </span>
@@ -55,23 +45,15 @@
                 <td> 
                   <p align="center" style="">
                     <span>
-                      ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}
+                      P: ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}<br/>
                     </span>
                   </p>
                 </td>
 
-                <td> 
-                  <p align="center" style="">
+                <td style="padding-right: 30px;"> 
+                  <p align="right">
                     <span>
-                      ${record.custbody_ng_cs_event_venue.custrecord_facility_phone}
-                    </span>
-                  </p>
-                </td>
-
-                <td> 
-                  <p align="center" style="">
-                    <span>
-                      ${companyInformation.url}
+                      <span float="right" style="color:#8E7530">${companyInformation.url}</span>
                     </span>
                   </p>
                 </td>
@@ -81,11 +63,9 @@
               <tr>
                 <td></td>
                 <td align="center">
-                  <p >
-                    <span>Company.Wordmark</span>                                
-                  </p>
+                  <p align="center" >Pinnacle Live, LLC</p>
                 </td>
-                <td style= "padding-right: 30px;">
+                <td style="padding-right: 30px;">
                   <p align="right">
                     <span float="right">Page: <pagenumber/></span>
                   </p>
@@ -95,139 +75,278 @@
         </macro>
 
         <macro id="nlheader2">
-          <table style="table-layout: fixed;" width="100%">
-
+          
+          <table width="100%" style="background-color: beige; margin-bottom:10pt;">
             <tr>
-              <td>
-                <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
-              </td>
-            </tr>         
+              <td style="padding-bottom: 10pt;">
+                <table style="table-layout: fixed;" width="100%">
 
-          </table>
-
-          <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
-
-            <tr>
-              <td width="60%">
-                <table style="table-layout: fixed; font-size: 8pt;" width="100%">
                   <tr>
+                    <td>
+                      <p align="right" style="padding: 10px 20px 0 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
+                    </td>
+                  </tr>         
+
+                </table>
+
+                <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+                  <tr>
+                    <td width="60%">
+                      <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+                        <tr>
+                          <td width="40%">
+                            <p>
+                              <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Version: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>1.0</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Event Name: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${record.custbody_show_table}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Prepared by: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${record.salesrep}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Printed on: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${.now}</span>
+                          </td>
+                        </tr>
+
+                      </table>
+
+                    </td>
                     <td width="40%">
-                      <p>
-                        <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
-                    </td>
-                  </tr>
+                      <table style="table-layout: fixed; font-size: 8pt;" width="100%">
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Version: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>1.0</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>${companyInformation.legalname}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Event Name: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>${record.custbody_show_table}</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>c/o ${record.custbody_ng_cs_event_venue}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Prepared by: </span>            
-                      </p>
-                    </td>
-                    <td>
-                      <span>${record.salesrep}</span>
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Sales Phone: </span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                            </p>
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Printed on: </span>            
-                      </p>
+                      </table>
                     </td>
-                    <td>
-                      <span>${.now}</span>
-                    </td>
-                  </tr>
+                  </tr>  
 
                 </table>
-                
+
               </td>
-              <td width="40%">
-                <table style="table-layout: fixed; font-size: 8pt;" width="100%">
-
-                  <tr>
-                    <td colspan="2">
-                      <p>
-                        <span>${companyInformation.legalname}</span>
-                      </p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="2">
-                      <p>
-                        <span>c/o ${record.custbody_ng_cs_event_venue}</span>
-                      </p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="2">
-                      <p>
-                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Sales Phone: </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p>
-                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
-                      </p>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <p>
-                        <span>Sales Fax: </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p>
-                        <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
-                      </p>
-                    </td>
-                  </tr>
-
-                </table>
-              </td>
-            </tr>  
-
-                  
-
+            </tr>
           </table>
+          
+
         </macro>
+
+        <macro id="nlheader3">
+          
+          <table width="100%" style="margin-bottom:10pt;">
+            <tr>
+              <td style="padding-bottom: 10pt;">
+                <table style="table-layout: fixed;" width="100%">
+
+                  <tr>
+                    <td>
+                      <p align="right" style="padding: 10px 20px 0 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
+                    </td>
+                  </tr>         
+
+                </table>
+
+                <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
+
+                  <tr>
+                    <td width="60%">
+                      <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+                        <tr>
+                          <td width="40%">
+                            <p>
+                              <span style="font-weight: bold; font-size: 8pt;">SOW Proposal: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span style="font-weight: bold; font-size: 8pt;">${record.tranid}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Version: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>1.0</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Event Name: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${record.custbody_show_table}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Prepared by: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${record.salesrep}</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Printed on: </span>            
+                            </p>
+                          </td>
+                          <td>
+                            <span>${.now}</span>
+                          </td>
+                        </tr>
+
+                      </table>
+
+                    </td>
+                    <td width="40%">
+                      <table style="table-layout: fixed; font-size: 8pt;" width="100%">
+
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>${companyInformation.legalname}</span>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>c/o ${record.custbody_ng_cs_event_venue}</span>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2">
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Sales Phone: </span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <p>
+                              <span>Sales Fax: </span>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
+                            </p>
+                          </td>
+                        </tr>
+
+                      </table>
+                    </td>
+                  </tr>  
+
+                </table>
+
+              </td>
+            </tr>
+          </table>
+          
+
+        </macro>
+      
     </macrolist>
     
     <style type="text/css">
@@ -277,7 +396,7 @@
         vertical-align: middle;
         margin-top: 15px;
       }
-      
+      #page1, #page2 { footer:nlfooter; footer-height:70; }
     </style>
   </head>
   <body padding="0in 0in 0in 0in" size="Letter">
@@ -323,123 +442,187 @@
       
     </#list>   
     
-    <table style="table-layout: fixed;" width="100%" height="350">
+
+          
+    <table style="table-layout: fixed;" width="100%" height="100%">
 
       <tr>
-        <td>
-          <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
-        </td>
-      </tr>
+        <td style="padding-top: 30px; padding-bottom: 20px">
 
-      <tr>
-        <td style="margin-top: 20px;">
-          <p style="margin-left: 50%; font-weight: bold; font-size: 12pt;">Event Services for:</p>
-          <p style="margin-left: 50%; font-weight: normal; font-size: 14pt;">${record.entity.altname}</p>
-
-        </td>
-      </tr>    
-
-    </table>
-
-    <table style="table-layout: fixed; page-break-after:always;" width="100%" height="50%">
-      <tr>
-        
-        <td width="50%" >          
-          <img src="${record.custbody_ng_cs_event_venue.custrecord_ng_cs_venue_cover_image_url}" width="100%" height="100%"/>
-        </td>
-
-        <td>
-          <table style="table-layout: fixed; margin-left: 50px; margin-top: 75px;" width="100%">
+          <table width="100%" height="150">
             <tr>
-              <td>
-                <p>
-                  <span style="font-weight: bold; font-size:12pt;">${record.custbody_ng_cs_event_venue}</span>
-                  <br />
-                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${startDate}</span>
-                  <br />
-                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${endDate}</span>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td style="margin-top: 60px;">
-                <p>
-                  <span style="font-weight: bold; font-size:12pt;">Prepared by:</span>
-                  <br />
-                  <span style="font-weight: normal; font-size:12pt; padding-left: 15px;">${record.salesrep}</span>
-                </p>
-              </td>
+            	<td width="50%" style="padding: 20px" >
+          			<p align="center"><#if companyInformation.logoUrl?length != 0><img height="40" src="https://7559516.app.netsuite.com/core/media/media.nl?id=5282&amp;c=7559516&amp;h=wHucQsZZVQa5rqpnBLTZLXfuCFXLopwNpC2wGbdBupoUvqHw&amp;fcts=20220912181517&amp;whence=" width="150" /> </#if></p>
+              	</td>
+              	<td width="50%" style="border-left: 3px solid #8E7530; padding: 10px 0 0 20px">
+                  <table>
+                    <tr>
+                    	<td style="padding-bottom: 10pt;"><span style="font-weight: normal; font-size: 22pt;">Scope of Work</span></td>
+                    </tr>
+                    <tr>
+                    	<td><span style=" font-size: 9pt; text-transform: uppercase; color: #9B7912;">Event Services for</span></td>
+                    </tr>
+                    <tr>
+                    	<td><span style="font-weight: normal; font-size: 12pt;">${record.entity.companyname}</span></td>
+                    </tr>
+                    <tr>
+                    	<td style="padding-top: 9pt"><span style="font-size: 9pt; text-transform: uppercase; color: #9B7912">Prepared by</span></td>
+                    </tr>
+                    <tr>
+                    	<td><span style="font-weight: normal; font-size:12pt;">${record.salesrep}</span></td>
+                    </tr>
+                    <tr>
+                    	<td style="padding-top: 9pt"><span style="font-size: 9pt; text-transform: uppercase; color: #9B7912">Location</span></td>
+                    </tr>
+                    <tr>
+                    	<td><span style=" font-size:12pt;">${record.custbody_ng_cs_event_venue}</span></td>
+                    </tr>                       
+                  </table>
+
+              	</td>
             </tr>
           </table>
-        </td>
 
+        </td>
       </tr>
+      <tr>
+        <td width="100%" >
+          <img src="${record.custbody_ng_cs_event_venue.custrecord_ng_cs_venue_cover_image_url}" dpi="198"/>
+        </td>
+      </tr>
+
     </table>
 
-    <pbr footer="nlfooter" footer-height="50"></pbr>
+    <pbr footer="nlfooter" footer-height="70"></pbr>
 
     <table style="table-layout: fixed; " width="100%" height="100%">
 
       <tr>
-        <td colspan="2">
-          <p align="center"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="133" /> </#if></p>
+
+        <td width="50%" style="padding:50px 30px 30px 40px">
+          <p>
+            <span style="font-size: 18pt;">This is just the first step.</span>
+          </p>
+          <p text-align="left">
+            <span style="font-size: 10pt; line-height: 150%;">Pinnacle Live is pleased to provide the following scope of work and estimate of services.  As a hospitality-focused company, we believe in quality over quantity.  With that in mind, we have carefully curated the information provided in the following pages as a comprehensive solution. This document presents an overview of the event scope, budget, and 
+acceptance timelines.   </span>
+          </p>
         </td>
+        
+        <td width="50%" style="padding:50px 40px 20px 20px" >
+			<table>
+              <tr>
+              	<td style="padding: 20px; background-color: beige">
+                  <table >
+                    <tr>
+                    	<td colspan="2">                   
+                          <p text-align="left" style="margin-bottom: 4pt;"><span style="font-size: 16pt; color: #9B7912;">SOW Schedule</span></p>
+                      	</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">Scope of Work Submission Date</span></p></td>
+                       <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">[Insert Date]</span></p></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">Scope of Work Acceptance Deadline</span></p></td>
+                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">[30 Days in Advance of Start]</span></p></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">Advanced Discount Acceptance Deadline</span></p></td>
+                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">[60 days in Advance of Start]* if applicable</span></p></td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+          	</table>
+        </td>
+      </tr>
+      <tr>
+
+        <td width="50%" >
+          <img src="https://7559516.app.netsuite.com/core/media/media.nl?id=5281&amp;c=7559516&amp;h=g41tM0UUjioyD2k7eFjTyvkzxpgaL__ycsaGNYJk1jE6jOW4&amp;fcts=20220912132658&amp;whence=" dpi="200" />
+        </td>
+        
+        <td width="50%" style="padding:20px 40px 30px 30px">
+          <p text-align="left">
+            <span style="font-size: 21pt;">Your event, your way.</span>
+          </p>
+          <p text-align="left">
+            <span style="font-size: 10pt; line-height: 150%;text-align: left; text-justify: none">We can’t wait to discuss our plans and solutions with you in detail. When it comes to live events, the unexpected is expected. Agile and responsive, we plan for problems and anticipate solutions. We understand that this process is collaborative. An up-close understanding of your event ensures we’re able to provide a truly tailored experience.</span>
+          </p>
+        </td>
+
       </tr>
 
       <tr>
-
-        <td width="50%" style="padding:30px">
+        
+        <td width="50%" style="padding:20px 30px 30px 40px">
           <p>
-            <span>Next generation Partnerships...</span>
+            <span style="font-size: 21pt;">Higher standards.</span>
           </p>
-          <p>
-            <span style="font-size: 10px; line-height: 150%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+          <p text-align="left">
+            <span style="font-size: 10pt; line-height: 150%;text-align: left !important ;text-justify: none !important">The most impressive, impactful meetings and events all have the same common denominator: dedicated, determined people, working behind-the-scenes to make it happen. Our event specialists are empowered  to realize your event goals. We’re by your side, from beginning to end. Our solutions and our people ensure the best possible live experience, every time. </span>
           </p>
         </td>
         
         <td width="50%" >
-          <img src="https://tstdrv1516212.secure.netsuite.com/core/media/media.nl?id=16023&amp;c=TSTDRV1516212&amp;h=eUyN1Z_hosa0DQCXRdmS6TfrZT6lBYzXnZ5HY-W3-LyKerQU" width="100%" height="100%"/>
-        </td>
-      </tr>
-      <tr>
-
-        <td width="50%" >
-          <img src="https://tstdrv1516212.secure.netsuite.com/core/media/media.nl?id=16023&amp;c=TSTDRV1516212&amp;h=eUyN1Z_hosa0DQCXRdmS6TfrZT6lBYzXnZ5HY-W3-LyKerQU" width="100%" height="100%"/>
-        </td>
-
-        <td width="50%" style="padding:30px">
-          <p>
-            <span>Next generation Partnerships...</span>
-          </p>
-          <p>
-            <span style="font-size: 10px; line-height: 150%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-          </p>
+          <img src="https://7559516.app.netsuite.com/core/media/media.nl?id=5280&amp;c=7559516&amp;h=6ZIDAKkhOSjzrxYXkNzeZr2yjgruLCAjIgLzLIijuHmKwcjw&amp;fcts=20220912132649&amp;whence=" dpi="200" />
         </td>
         
         
       </tr>
+	  <tr>
+      	<td colspan="2" style="padding: 20px 40px 0 40px;">
+        	<table width="100%" style="background-color: #F7F7F7">
+              <tr>
+              	<td style="padding-top: 10pt">
 
-      <tr>
-
-        <td width="50%" style="padding:30px">
-          <p>
-            <span>Next generation Partnerships...</span>
-          </p>
-          <p>
-            <span style="font-size: 10px; line-height: 150%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-          </p>
-        </td>
-        
-        <td width="50%" >
-          <img src="https://tstdrv1516212.secure.netsuite.com/core/media/media.nl?id=16023&amp;c=TSTDRV1516212&amp;h=eUyN1Z_hosa0DQCXRdmS6TfrZT6lBYzXnZ5HY-W3-LyKerQU" width="100%" height="100%"/>
-        </td>
-      </tr>
-
+                </td>
+              	<td colspan="2"  style="padding-top: 10pt">
+                  <p align="left" style="padding-left: 50pt;">
+                    <span style="font-size: 10pt; text-transform: uppercase; color: #9B7912">Additional On-site Support</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+              	<td style="font-size: 10pt; line-height: 120%; padding-bottom: 10pt; padding-left: 10pt;">
+                  <p>
+                    <span style="font-weight:bold">${record.salesrep}</span><br/>
+                    Job Title<br/>
+                    Pinnacle Live<br/>
+                    ${record.custbody_ng_cs_event_venue}<br/>
+                    Phone: (xxx) xxx-xxxx<br/>
+                    email@email.com
+                  </p>
+                </td>
+              	<td style="font-size: 10pt; line-height: 120%; padding-bottom: 10pt">
+                  <p>
+                    <span style="font-weight:bold">Person 2</span><br/>
+                    Job Title<br/>
+                    Pinnacle Live<br/>
+                    Phone: (xxx) xxx-xxxx<br/>
+                    email@email.com
+                  </p>
+                </td>
+              	<td style="font-size: 10pt; line-height: 120%; padding-bottom: 10pt">
+                  <p>
+                    <span style="font-weight:bold">Person 3</span><br/>
+                    Job Title<br/>
+                    Pinnacle Live<br/>
+                    Phone: (xxx) xxx-xxxx<br/>
+                    email@email.com
+                  </p>
+                </td>
+              </tr>
+          </table>
+        </td>	
       
-
+      </tr>
+      
     </table>
 
-    <pbr header="nlheader2" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
+    <pbr header="nlheader2" header-height="160" footer="nlfooter2" footer-height="50"></pbr>
     <!--
     <table style="table-layout: fixed;" width="100%">
 
@@ -1133,7 +1316,7 @@
       </tr>
     </table>
 
-    <pbr header="nlheader2" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
+    <pbr header="nlheader3" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
 
     <!-- Event Rental Items, Services, and Labor Detail -->
 
