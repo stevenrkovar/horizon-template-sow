@@ -244,11 +244,11 @@
                         <tr>
                           <td width="30%">
                             <p align="left">
-                              <span style="font-weight: bold; font-size: 8pt;">SOW Proposal: </span>            
+                              <span style="font-size: 8pt;">SOW Proposal: </span>            
                             </p>
                           </td>
                           <td>
-                            <span style="font-weight: bold; font-size: 8pt;">${record.tranid}</span>
+                            <span style="font-size: 8pt;">${record.tranid}</span>
                           </td>
                         </tr>
 
@@ -262,17 +262,6 @@
                             <span>1.0</span>
                           </td>
                         </tr>
-
-                        <!--<tr>
-                          <td>
-                            <p>
-                              <span>Printed on: </span>            
-                            </p>
-                          </td>
-                          <td>
-                            <span>${.now}</span>
-                          </td>
-                        </tr> -->
 
                       </table>
 
@@ -416,29 +405,44 @@
             	<td width="50%" style="padding: 20px" >
           			<p align="center"><#if companyInformation.logoUrl?length != 0><img height="40" src="https://7559516.app.netsuite.com/core/media/media.nl?id=5282&amp;c=7559516&amp;h=wHucQsZZVQa5rqpnBLTZLXfuCFXLopwNpC2wGbdBupoUvqHw&amp;fcts=20220912181517&amp;whence=" width="150" /> </#if></p>
               	</td>
-              	<td width="50%" style="border-left: 3px solid #8E7530; padding: 10px 0 0 20px">
+              	<td width="50%" style="border-left: 3px solid #8E7530; padding: 0 5px 0 20px">
                   <table>
                     <tr>
-                    	<td style="padding-bottom: 10pt;"><span style="font-weight: normal; font-size: 22pt;">Scope of Work</span></td>
+                    	<td width="60%"></td>
+                      	<td width="40%"></td>
                     </tr>
                     <tr>
-                    	<td><span style=" font-size: 9pt; text-transform: uppercase; color: #9B7912;">Event Services for</span></td>
+                    	<td style="padding-bottom: 10pt;" colspan="2"><span style="font-weight: normal; font-size: 20pt; padding-bottom: 10pt">Scope of Work</span></td>
                     </tr>
                     <tr>
-                    	<td><span style="font-weight: normal; font-size: 12pt;">${record.entity.companyname}</span></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912">Proposal</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size:8pt;">${record.tranid}</span></p></td>
                     </tr>
                     <tr>
-                    	<td style="padding-top: 9pt"><span style="font-size: 9pt; text-transform: uppercase; color: #9B7912">Prepared by</span></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912">Version</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size:8pt;">1.0</span></p></td>
                     </tr>
                     <tr>
-                    	<td><span style="font-weight: normal; font-size:12pt;">${record.salesrep}</span></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912;">Event Services for</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt;">${record.entity.companyname}</span></p></td>
                     </tr>
                     <tr>
-                    	<td style="padding-top: 9pt"><span style="font-size: 9pt; text-transform: uppercase; color: #9B7912">Location</span></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912">Prepared for</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size:8pt;">Customer's name</span></p></td>
                     </tr>
                     <tr>
-                    	<td><span style=" font-size:12pt;">${record.custbody_ng_cs_event_venue}</span></td>
-                    </tr>                       
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912;">Event</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt;">${record.custbody_show_table}</span></p></td>
+                    </tr>
+                    <tr>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912;">Prepared by</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size:8pt;">${record.salesrep}</span></p></td>
+                    </tr>
+                    <tr>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912">Location</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left"><span style="font-size:8pt;">${record.custbody_ng_cs_event_venue}</span></p></td>
+                    </tr>
+                    
                   </table>
 
               	</td>
@@ -472,41 +476,40 @@ acceptance timelines.   </span>
         </td>
         
         <td width="50%" style="padding:50px 40px 20px 20px" >
-			<table>
+			<table width="100%">
+              
               <tr>
               	<td style="padding: 20px; background-color: beige">
-                  <table >
+                  
+                  <table width="100%">
                     <tr>
-                    	<td colspan="2">                   
-                          <p text-align="left" style="margin-bottom: 4pt;"><span style="font-size: 16pt; color: #9B7912;">SOW Schedule</span></p>
+                    	<td>
+                          <p style="font-size: 10pt; line-height: 150%;">
+                            <span style="font-weight:bold">${record.salesrep}</span><br/>
+                            Job Title<br/>
+                            Pinnacle Live<br/>
+                            ${record.custbody_ng_cs_event_venue}<br/>
+                            Phone: (xxx) xxx-xxxx<br/>
+                            email@email.com
+                          </p>
                       	</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">Scope of Work Submission Date</span></p></td>
-                       <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">[Insert Date]</span></p></td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">Scope of Work Acceptance Deadline</span></p></td>
-                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">[30 Days in Advance of Start]</span></p></td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">Advanced Discount Acceptance Deadline</span></p></td>
-                      <td style="padding: 4px 0;"><p text-align="left"><span style="font-size: 10pt; line-height: 150%">[60 days in Advance of Start]* if applicable</span></p></td>
                     </tr>
                   </table>
 
                 </td>
+
+                
               </tr>
           	</table>
         </td>
       </tr>
       <tr>
 
-        <td width="50%" >
+        <td width="50%" style="padding-top: 20px;" >
           <img src="https://7559516.app.netsuite.com/core/media/media.nl?id=5281&amp;c=7559516&amp;h=g41tM0UUjioyD2k7eFjTyvkzxpgaL__ycsaGNYJk1jE6jOW4&amp;fcts=20220912132658&amp;whence=" dpi="200" />
         </td>
         
-        <td width="50%" style="padding:20px 40px 30px 30px">
+        <td width="50%" style="padding:40px 40px 30px 30px">
           <p text-align="left">
             <span style="font-size: 21pt;">Your event, your way.</span>
           </p>
@@ -519,7 +522,7 @@ acceptance timelines.   </span>
 
       <tr>
         
-        <td width="50%" style="padding:20px 30px 30px 40px">
+        <td width="50%" style="padding:50px 30px 30px 40px">
           <p>
             <span style="font-size: 21pt;">Higher standards.</span>
           </p>
@@ -528,197 +531,17 @@ acceptance timelines.   </span>
           </p>
         </td>
         
-        <td width="50%" >
+        <td width="50%" style="padding-top: 30px;" >
           <img src="https://7559516.app.netsuite.com/core/media/media.nl?id=5280&amp;c=7559516&amp;h=6ZIDAKkhOSjzrxYXkNzeZr2yjgruLCAjIgLzLIijuHmKwcjw&amp;fcts=20220912132649&amp;whence=" dpi="200" />
         </td>
         
         
       </tr>
-	  <tr>
-      	<td colspan="2" style="padding: 20px 40px 0 40px;">
-        	<table width="100%" style="background-color: #F7F7F7">
-              <tr>
-              	<td style="padding-top: 10pt">
-
-                </td>
-              	<td colspan="2"  style="padding-top: 10pt">
-                  <p align="left" style="padding-left: 50pt;">
-                    <span style="font-size: 10pt; text-transform: uppercase; color: #9B7912">Additional On-site Support</span>
-                  </p>
-                </td>
-              </tr>
-              <tr>
-              	<td style="font-size: 10pt; line-height: 120%; padding-bottom: 10pt; padding-left: 10pt;">
-                  <p>
-                    <span style="font-weight:bold">${record.salesrep}</span><br/>
-                    Job Title<br/>
-                    Pinnacle Live<br/>
-                    ${record.custbody_ng_cs_event_venue}<br/>
-                    Phone: (xxx) xxx-xxxx<br/>
-                    email@email.com
-                  </p>
-                </td>
-              	<td style="font-size: 10pt; line-height: 120%; padding-bottom: 10pt">
-                  <p>
-                    <span style="font-weight:bold">Person 2</span><br/>
-                    Job Title<br/>
-                    Pinnacle Live<br/>
-                    Phone: (xxx) xxx-xxxx<br/>
-                    email@email.com
-                  </p>
-                </td>
-              	<td style="font-size: 10pt; line-height: 120%; padding-bottom: 10pt">
-                  <p>
-                    <span style="font-weight:bold">Person 3</span><br/>
-                    Job Title<br/>
-                    Pinnacle Live<br/>
-                    Phone: (xxx) xxx-xxxx<br/>
-                    email@email.com
-                  </p>
-                </td>
-              </tr>
-          </table>
-        </td>	
-      
-      </tr>
       
     </table>
 
-    <pbr header="nlheader2" header-height="160" footer="nlfooter3" footer-height="50"></pbr>
-    <!--
-    <table style="table-layout: fixed;" width="100%">
+    <pbr header="nlheader2" header-height="160" footer="nlfooter3" footer-height="30"></pbr>
 
-      <tr>
-        <td>
-          <p align="right"><#if companyInformation.logoUrl?length != 0><img height="60" src="${companyInformation.logoUrl}" width="200" /> </#if></p>
-        </td>
-      </tr>         
-
-    </table>
-
-    <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
-
-      <tr>
-        <td width="60%">
-          <table style="table-layout: fixed; font-size: 8pt;" width="100%">
-            <tr>
-              <td width="40%">
-                <p>
-                  <span style="font-weight: bold; font-size: 16pt;">SOW Proposal: </span>            
-                </p>
-              </td>
-              <td>
-                <span style="font-weight: bold; font-size: 16pt;">${record.tranid}</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <p>
-                  <span>Version: </span>            
-                </p>
-              </td>
-              <td>
-                <span>1.0</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <p>
-                  <span>Event Name: </span>            
-                </p>
-              </td>
-              <td>
-                <span>${record.custbody_show_table}</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <p>
-                  <span>Prepared by: </span>            
-                </p>
-              </td>
-              <td>
-                <span>${record.salesrep}</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <p>
-                  <span>Printed on: </span>            
-                </p>
-              </td>
-              <td>
-                <span>${.now}</span>
-              </td>
-            </tr>
-
-          </table>
-          
-        </td>
-        <td width="40%">
-          <table style="table-layout: fixed; font-size: 8pt;" width="100%">
-
-            <tr>
-              <td colspan="2">
-                <p>
-                  <span>${companyInformation.legalname}</span>
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">
-                <p>
-                  <span>c/o ${record.custbody_ng_cs_event_venue}</span>
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">
-                <p>
-                  <span>${record.custbody_ng_cs_event_venue.custrecord_facility_fulladdress}</span>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>
-                  <span>Sales Phone: </span>
-                </p>
-              </td>
-              <td>
-                <p>
-                  <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <p>
-                  <span>Sales Fax: </span>
-                </p>
-              </td>
-              <td>
-                <p>
-                  <span>${record.custbody_ng_cs_event_venue.custrecord_facility_phone}</span>
-                </p>
-              </td>
-            </tr>
-
-          </table>
-        </td>
-      </tr>  
-
-            
-
-    </table>
-    -->
     <!-- Event Overview -->
 
     <table style="table-layout: fixed; padding-left: 30px; padding-right: 30px;" width="100%">
@@ -1278,7 +1101,7 @@ acceptance timelines.   </span>
       </tr>
     </table>
 
-    <pbr header="nlheader3" header-height="110" footer="nlfooter3" footer-height="50"></pbr>
+    <pbr header="nlheader3" header-height="110" footer="nlfooter3" footer-height="30"></pbr>
 
     <!-- Event Rental Items, Services, and Labor Detail -->
 
@@ -1994,7 +1817,7 @@ acceptance timelines.   </span>
 
     
 
-    <pbr header="nlheader2" header-height="150" footer="nlfooter2" footer-height="50"></pbr>
+    <pbr header="nlheader2" header-height="160" footer="nlfooter3" footer-height="30"></pbr>
 
     <!-- Terms and Conditions -->
 
@@ -2008,7 +1831,7 @@ acceptance timelines.   </span>
 
       <tr style="padding-top: 10px;">
         <td>
-          <p style="font-size: 8pt; padding-left: 10px;">
+          <p style="font-size: 8pt; padding-left: 10px;line-height: 140%;">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus sed viverra tellus in hac habitasse platea. Arcu odio ut sem nulla pharetra diam sit amet. Et netus et malesuada fames ac turpis egestas sed. Id diam vel quam elementum pulvinar etiam. Vel pharetra vel turpis nunc eget lorem. Commodo odio aenean sed adipiscing. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Pellentesque elit ullamcorper dignissim cras tincidunt. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Enim facilisis gravida neque convallis a cras semper auctor neque. Blandit turpis cursus in hac habitasse platea dictumst quisque. Sollicitudin aliquam ultrices sagittis orci a. Et ligula ullamcorper malesuada proin libero nunc. Et netus et malesuada fames ac turpis egestas sed. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec.<br /><br />
 
 Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi. Facilisi nullam vehicula ipsum a. Integer enim neque volutpat ac tincidunt vitae semper. Eget nunc lobortis mattis aliquam faucibus purus in massa. Ullamcorper malesuada proin libero nunc consequat interdum. A cras semper auctor neque. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Faucibus purus in massa tempor nec feugiat. Tortor condimentum lacinia quis vel eros donec ac odio. Ut aliquam purus sit amet. A diam maecenas sed enim ut sem.<br /><br />
