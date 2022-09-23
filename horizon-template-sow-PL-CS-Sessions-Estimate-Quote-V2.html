@@ -19,7 +19,15 @@
               <tr>
                 <td>
                   	<div position="absolute" width="100%" style="padding-top: 15pt;"><p align="center" ><span style="color:#8E7530">www.pinnaclelive.com</span></p></div>
-					<p align="right" style="padding: 0 20px 20px 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
+					<p align="right" style="padding: 0 20px 20px 0">
+                      <#if subsidiary.logo?length != 0>
+                          <img height="40" width="100" src="${subsidiary.logo@url}"/>
+                      <#else>
+                      	<#if companyInformation.logoUrl?length != 0>
+                          <img height="40" width="100" src="${companyInformation.logoUrl}"/>
+                        </#if>
+                      </#if>
+                     </p>
                 </td>
               </tr>
             </table>
@@ -105,7 +113,17 @@
                       	</p>
                     </td>
                     <td>
-                      <p align="right" style="padding: 10px 20px 0 0"><#if companyInformation.logoUrl?length != 0><img height="40" src="${companyInformation.logoUrl}" width="100" /> </#if></p>
+                      <p align="right" style="padding: 10px 20px 0 0">
+                        
+                      <#if subsidiary.logo?length != 0>
+                          <img height="40" width="100" src="${subsidiary.logo@url}"/>
+                      <#else>
+                      	<#if companyInformation.logoUrl?length != 0>
+                          <img height="40" width="100" src="${companyInformation.logoUrl}"/>
+                        </#if>
+                      </#if>
+                        
+                      </p>
                     </td>
                   </tr>         
 
@@ -428,7 +446,7 @@
                     </tr>
                     <tr>
                     	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912">Prepared for</span></p></td>
-                    	<td style="padding-bottom: 5px"><p align="left" style="padding-left: 5px"><span style="font-size:8pt;">Customer's name</span></p></td>
+                    	<td style="padding-bottom: 5px"><p align="left" style="padding-left: 5px"><span style="font-size:8pt;">${record.entity.contact.entityid}</span></p></td>
                     </tr>
                     <tr>
                     	<td style="padding-bottom: 5px"><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912;">Event Name</span></p></td>
@@ -444,7 +462,7 @@
                     </tr>
                     <tr>
                     	<td><p align="left"><span style="font-size: 8pt; text-transform: uppercase; color: #9B7912">Event Date</span></p></td>
-                    	<td><p align="left" style="padding-left: 5px"><span style="font-size:8pt;">xx-xx-xxxx - xx-xx-xxxx</span></p></td>
+                    	<td><p align="left" style="padding-left: 5px"><span style="font-size:8pt;">${record.custrecord_ng_cs_start_date} - ${record.custrecord_ng_cs_end_date}</span></p></td>
                     </tr>                    
                   </table>
 
@@ -492,8 +510,8 @@ acceptance timelines.   </span>
                             Job Title<br/>
                             Pinnacle Live<br/>
                             ${record.custbody_ng_cs_event_venue}<br/>
-                            Phone: (xxx) xxx-xxxx<br/>
-                            email@email.com
+                            Phone: ${record.salesrep.phone}<br/>
+                            Email: <a href="mailto:${record.salesrep.email}">${record.salesrep.email}</a>
                           </p>
                       	</td>
                     </tr>
